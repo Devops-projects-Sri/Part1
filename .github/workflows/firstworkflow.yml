@@ -1,0 +1,16 @@
+name: First Workflow
+
+on:
+  pull_request:
+    branches:
+    - main
+  workflow_dispatch:
+
+  jobs:
+    my_first_job:
+      runs-on: ubuntu-latest
+      steps:
+        - run: echo "Github Action Test"
+        - name: checkout
+          uses: actions/checkout@v6.0.2
+    
